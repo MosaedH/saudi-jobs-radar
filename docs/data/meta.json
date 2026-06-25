@@ -1,0 +1,41 @@
+{
+  "lastUpdated": "2026-06-25T09:58:03.375Z",
+  "profileLabel": "Cybersecurity — Saudi Arabia",
+  "totals": {
+    "total": 8,
+    "new24h": 4,
+    "byPublisher": {
+      "Indeed": 2,
+      "GulfTalent": 1,
+      "LinkedIn": 2,
+      "Bayt": 2,
+      "Glassdoor": 1
+    },
+    "bySource": {
+      "Sample": 8
+    }
+  },
+  "queries": [
+    "cyber security",
+    "information security",
+    "security analyst",
+    "SOC analyst",
+    "penetration tester",
+    "security engineer",
+    "GRC ISO 27001",
+    "information security risk compliance"
+  ],
+  "sources": {
+    "note": "Seed data. Real source run timestamps appear here after the first fetch.",
+    "jsearch": {
+      "lastRun": "2026-06-25T09:58:03.375Z",
+      "lastCount": 0,
+      "ok": true
+    },
+    "jooble": {
+      "lastRun": "2026-06-25T09:58:03.375Z",
+      "lastCount": 0,
+      "ok": true
+    }
+  }
+}

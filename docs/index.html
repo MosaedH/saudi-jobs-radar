@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saudi Cyber Jobs Radar</title>
+  <meta name="description" content="Hourly aggregated cybersecurity jobs in Saudi Arabia from LinkedIn, Indeed, Glassdoor, Bayt and more." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🛡️</span>
+      <div>
+        <h1>Saudi Cyber Jobs Radar</h1>
+        <p class="sub" dir="rtl">رادار وظائف الأمن السيبراني في السعودية</p>
+      </div>
+    </div>
+    <div class="status">
+      <div class="stat"><span id="totalCount">—</span><label>jobs</label></div>
+      <div class="stat new"><span id="newCount">—</span><label>new for you</label></div>
+      <div class="updated">Updated <span id="lastUpdated">—</span></div>
+    </div>
+  </header>
+
+  <section class="controls">
+    <input id="search" type="search" placeholder="Search title, company, keyword…" autocomplete="off" />
+    <select id="sourceFilter" title="Source / platform"><option value="">All sources</option></select>
+    <select id="cityFilter" title="City"><option value="">All locations</option></select>
+    <select id="dateFilter" title="Posted within">
+      <option value="0">Any time</option>
+      <option value="1">Last 24 hours</option>
+      <option value="3">Last 3 days</option>
+      <option value="7">Last 7 days</option>
+    </select>
+    <select id="sortBy" title="Sort by">
+      <option value="new">Newest first</option>
+      <option value="score">Best match</option>
+    </select>
+    <label class="toggle"><input type="checkbox" id="newOnly" /> New only</label>
+    <button id="markSeen" class="ghost" title="Mark all current jobs as seen">Mark all seen</button>
+  </section>
+
+  <main id="results" class="results" aria-live="polite"></main>
+
+  <footer class="foot">
+    <p id="sourceBreakdown"></p>
+    <p>
+      Aggregated via Google for Jobs (JSearch) + Jooble. Refreshes hourly.
+      <a id="ghLink" href="#" hidden>source</a>
+    </p>
+  </footer>
+
+  <template id="cardTpl">
+    <article class="card">
+      <div class="card-main">
+        <a class="title" target="_blank" rel="noopener"></a>
+        <div class="meta">
+          <span class="company"></span>
+          <span class="dot">·</span>
+          <span class="city"></span>
+        </div>
+        <p class="desc"></p>
+        <div class="tags"></div>
+      </div>
+      <div class="card-side">
+        <span class="badge new-badge" hidden>NEW</span>
+        <span class="score" title="Relevance score"></span>
+        <span class="publisher"></span>
+        <span class="posted"></span>
+        <a class="apply" target="_blank" rel="noopener">Apply ↗</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

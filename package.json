@@ -1,0 +1,15 @@
+{
+  "name": "saudi-jobs-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hourly aggregator of cybersecurity jobs in Saudi Arabia (LinkedIn, Indeed, Glassdoor, Bayt via Google-for-Jobs + Jooble).",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch-jobs.js",
+    "fetch:env": "node --env-file=.env scripts/fetch-jobs.js",
+    "serve": "node scripts/serve.js"
+  }
+}

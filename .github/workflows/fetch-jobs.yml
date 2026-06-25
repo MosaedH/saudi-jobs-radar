@@ -1,0 +1,45 @@
+name: Fetch jobs (hourly)
+
+on:
+  schedule:
+    # Runs at the top of every hour (UTC). GitHub may delay it under load.
+    - cron: "0 * * * *"
+  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-jobs
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch and score jobs
+        env:
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          JOOBLE_KEY: ${{ secrets.JOOBLE_KEY }}
+          CAREERJET_AFFID: ${{ secrets.CAREERJET_AFFID }}
+        run: node scripts/fetch-jobs.js
+
+      - name: Commit updated data
+        run: |
+          git config user.name "jobs-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/jobs.json docs/data/meta.json
+          if git diff --staged --quiet; then
+            echo "No data changes this run."
+          else
+            git commit -m "chore(data): hourly jobs refresh [skip ci]"
+            git push
+          fi

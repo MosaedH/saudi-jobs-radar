@@ -1,0 +1,72 @@
+{
+  "label": "Cybersecurity — Saudi Arabia",
+  "country": "sa",
+  "locations": ["Saudi Arabia", "Riyadh", "Jeddah", "Dammam", "Khobar", "Mecca", "Medina", "NEOM", "Remote"],
+
+  "queries": [
+    "cyber security",
+    "information security",
+    "security analyst",
+    "SOC analyst",
+    "penetration tester",
+    "security engineer",
+    "GRC ISO 27001",
+    "information security risk compliance"
+  ],
+
+  "keywords": {
+    "core": [
+      "cyber security", "cybersecurity", "information security", "infosec",
+      "security analyst", "soc analyst", "soc", "security operations",
+      "security engineer", "security architect", "security consultant",
+      "penetration test", "penetration tester", "pentest", "ethical hacking",
+      "red team", "blue team", "purple team", "vapt",
+      "incident response", "threat", "threat intelligence", "threat hunting",
+      "vulnerability", "vulnerability management", "siem", "soar",
+      "grc", "governance risk", "iso 27001", "iso27001", "iso 27002",
+      "risk management", "compliance", "audit", "information security officer",
+      "ciso", "iam", "identity and access", "pam",
+      "network security", "application security", "appsec", "devsecops",
+      "cloud security", "security architecture", "forensics", "malware analysis",
+      "data protection", "privacy", "ot security", "ics security", "zero trust"
+    ],
+    "nice": [
+      "nist", "mitre", "att&ck", "splunk", "qradar", "sentinel", "crowdstrike",
+      "firewall", "ids", "ips", "edr", "xdr", "dlp", "owasp", "kali",
+      "ceh", "cissp", "cism", "oscp", "comptia", "security+", "iso 27001 lead",
+      "saudi", "ksa", "riyadh", "jeddah", "dammam", "neom",
+      "aramco", "stc", "sabic", "nca", "sama", "ecc", "saudi central bank",
+      "essential cybersecurity controls"
+    ]
+  },
+
+  "exclude": [
+    "sales representative", "telesales", "cashier", "cleaner", "driver",
+    "nurse", "physician", "receptionist", "barista", "waiter",
+    "graphic designer", "civil engineer", "mechanical engineer", "hvac"
+  ],
+
+  "minMatchScore": 8,
+  "retentionDays": 45,
+  "maxJobs": 1500,
+
+  "sources": {
+    "jsearch": {
+      "enabled": true,
+      "minIntervalHours": 6,
+      "datePosted": "week",
+      "query": "(\"cyber security\" OR \"information security\" OR \"SOC analyst\" OR \"penetration tester\" OR \"GRC\") jobs in Saudi Arabia"
+    },
+    "jooble": {
+      "enabled": true,
+      "minIntervalHours": 1,
+      "maxQueries": 6
+    },
+    "careerjet": {
+      "enabled": false,
+      "minIntervalHours": 6,
+      "maxQueries": 4,
+      "localeCode": "en_SA"
+    }
+  }
+}
