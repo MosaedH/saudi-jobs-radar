@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T13:15:06.027Z",
+  "lastUpdated": "2026-06-25T16:22:48.196Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
     "total": 4,
@@ -24,12 +24,12 @@
   "sources": {
     "note": "Seed data. Real source run timestamps appear here after the first fetch.",
     "jsearch": {
-      "lastRun": "2026-06-25T09:58:03.375Z",
+      "lastRun": "2026-06-25T16:22:48.196Z",
       "lastCount": 0,
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-06-25T13:15:06.027Z",
+      "lastRun": "2026-06-25T16:22:48.196Z",
       "lastCount": 50,
       "ok": true
     }
