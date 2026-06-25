@@ -1,18 +1,14 @@
 {
-  "lastUpdated": "2026-06-25T10:26:36.366Z",
+  "lastUpdated": "2026-06-25T13:15:06.027Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
-    "total": 8,
+    "total": 4,
     "new24h": 4,
     "byPublisher": {
-      "Indeed": 2,
-      "GulfTalent": 1,
-      "LinkedIn": 2,
-      "Bayt": 2,
-      "Glassdoor": 1
+      "swooped.co": 4
     },
     "bySource": {
-      "Sample": 8
+      "Jooble": 4
     }
   },
   "queries": [
@@ -33,8 +29,8 @@
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-06-25T09:58:03.375Z",
-      "lastCount": 0,
+      "lastRun": "2026-06-25T13:15:06.027Z",
+      "lastCount": 50,
       "ok": true
     }
   }
