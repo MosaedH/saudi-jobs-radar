@@ -61,6 +61,28 @@ function applyMeta(meta) {
       .map(([k, v]) => `${k}: ${v}`);
     $('#sourceBreakdown').textContent = parts.length ? `By platform — ${parts.join('  ·  ')}` : '';
   }
+
+  updateBanner();
+}
+
+function updateBanner() {
+  const sampleCount = ALL.filter((j) => j.source === 'Sample').length;
+  const realCount = ALL.length - sampleCount;
+  const banner = $('#banner');
+  if (sampleCount > 0 && realCount === 0) {
+    banner.hidden = false;
+    banner.innerHTML =
+      '<b>Preview / sample data.</b> These ' + sampleCount +
+      ' listings are placeholders to show the layout — their links open each platform’s <b>search page</b>, not a specific job. ' +
+      'Add your API keys (repo secrets <b>RAPIDAPI_KEY</b> / <b>JOOBLE_KEY</b>) and the hourly job replaces them with <b>real postings that link directly to each job</b>.';
+  } else if (sampleCount > 0) {
+    banner.hidden = false;
+    banner.innerHTML =
+      '<b>' + realCount + ' real</b> listing(s) + ' + sampleCount +
+      ' remaining sample(s). Sample cards are tagged and open a search page; real cards link directly to the job.';
+  } else {
+    banner.hidden = true;
+  }
 }
 
 function buildFilterOptions() {
@@ -160,6 +182,19 @@ function render() {
 
     const apply = node.querySelector('.apply');
     if (job.applyLink) apply.href = job.applyLink; else apply.remove();
+
+    if (job.source === 'Sample') {
+      node.querySelector('.card').classList.add('is-sample');
+      const sb = document.createElement('span');
+      sb.className = 'badge sample-badge';
+      sb.textContent = 'SAMPLE';
+      node.querySelector('.card-side').prepend(sb);
+      if (apply && apply.parentNode) {
+        apply.textContent = 'Search page ↗';
+        apply.classList.add('is-search');
+        apply.title = 'Sample item — opens the platform’s search page, not a specific job';
+      }
+    }
 
     root.appendChild(node);
   }

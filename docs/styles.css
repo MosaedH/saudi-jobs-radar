@@ -75,6 +75,31 @@ select { cursor: pointer; }
 button.ghost { cursor: pointer; color: var(--muted); }
 button.ghost:hover { color: var(--text); border-color: var(--accent-2); }
 
+.banner {
+  margin: 0;
+  padding: 12px clamp(16px, 4vw, 48px);
+  background: rgba(255, 176, 32, 0.12);
+  border-bottom: 1px solid rgba(255, 176, 32, 0.35);
+  color: #ffd98a;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.banner b { color: var(--new); }
+
+.is-sample { border-style: dashed; opacity: 0.92; }
+.badge.sample-badge {
+  background: rgba(255, 176, 32, 0.15);
+  color: var(--new);
+  border: 1px solid rgba(255, 176, 32, 0.5);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+.apply.is-search { background: var(--panel-2); color: var(--muted); border: 1px solid var(--border); }
+.apply.is-search:hover { color: var(--text); }
+
 .results {
   display: grid;
   gap: 12px;
