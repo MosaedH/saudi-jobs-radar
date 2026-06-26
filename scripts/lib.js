@@ -39,6 +39,21 @@ export function jobId(job) {
   return hash(`${slug(job.title)}|${slug(job.company)}|${slug(job.city)}`);
 }
 
+// Whole-word/phrase matcher (cached regex). Prevents "soc" matching "Social"
+// or "associate", "ids" matching "considers", etc. A keyword matches only when
+// bounded by a non-alphanumeric character or the start/end of the string.
+const _reCache = new Map();
+function kwRegex(kw) {
+  let re = _reCache.get(kw);
+  if (!re) {
+    const esc = kw.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    re = new RegExp('(?:^|[^a-z0-9])' + esc + '(?:[^a-z0-9]|$)', 'i');
+    _reCache.set(kw, re);
+  }
+  return re;
+}
+function hasKw(text, kw) { return kwRegex(kw).test(text); }
+
 /**
  * Relevance score for a job against the profile.
  * Core keyword in title = +10, in description = +3.
@@ -52,19 +67,17 @@ export function scoreJob(job, profile) {
   const hits = [];
 
   for (const kw of profile.keywords.core) {
-    const k = kw.toLowerCase();
-    if (title.includes(k)) { score += 10; hits.push(kw); }
-    else if (desc.includes(k)) { score += 3; hits.push(kw); }
+    if (hasKw(title, kw)) { score += 10; hits.push(kw); }
+    else if (hasKw(desc, kw)) { score += 3; hits.push(kw); }
   }
   for (const kw of profile.keywords.nice) {
-    const k = kw.toLowerCase();
-    if (title.includes(k)) score += 4;
-    else if (desc.includes(k)) score += 1;
+    if (hasKw(title, kw)) score += 4;
+    else if (hasKw(desc, kw)) score += 1;
   }
 
   let excluded = false;
   for (const ex of profile.exclude || []) {
-    if (title.includes(ex.toLowerCase())) { excluded = true; break; }
+    if (hasKw(title, ex)) { excluded = true; break; }
   }
 
   return { score, hits: [...new Set(hits)].slice(0, 6), excluded };
