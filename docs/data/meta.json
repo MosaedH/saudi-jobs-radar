@@ -1,14 +1,18 @@
 {
-  "lastUpdated": "2026-06-26T03:34:08.443Z",
+  "lastUpdated": "2026-06-26T03:57:00.610Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
-    "total": 4,
-    "new24h": 4,
+    "total": 8,
+    "new24h": 1,
     "byPublisher": {
-      "swooped.co": 4
+      "Indeed": 2,
+      "GulfTalent": 1,
+      "LinkedIn": 2,
+      "Bayt": 2,
+      "Glassdoor": 1
     },
     "bySource": {
-      "Jooble": 4
+      "Sample": 8
     }
   },
   "queries": [
@@ -22,14 +26,13 @@
     "information security risk compliance"
   ],
   "sources": {
-    "note": "Seed data. Real source run timestamps appear here after the first fetch.",
     "jsearch": {
-      "lastRun": "2026-06-25T23:16:58.616Z",
+      "lastRun": "2026-06-26T03:57:00.610Z",
       "lastCount": 0,
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-06-26T03:34:08.443Z",
+      "lastRun": "2026-06-26T03:57:00.610Z",
       "lastCount": 50,
       "ok": true
     }

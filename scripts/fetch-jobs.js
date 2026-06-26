@@ -53,7 +53,6 @@ async function main() {
   console.log(`Profile: ${profile.label} | stored jobs: ${existing.length}`);
 
   let fetched = [];
-  let realFetchHappened = false;
 
   for (const [name, cfg] of Object.entries(profile.sources || {})) {
     const fn = SOURCES[name];
@@ -65,7 +64,6 @@ async function main() {
     console.log(`- ${name}: fetching…`);
     const jobs = await fn(profile, process.env);
     sourceState[name] = { lastRun: nowISO, lastCount: jobs.length, ok: true };
-    if (jobs.length) realFetchHappened = true;
     fetched = fetched.concat(jobs);
   }
 
@@ -81,7 +79,9 @@ async function main() {
   }
   console.log(`Fetched ${fetched.length}, relevant ${kept.length}`);
 
-  // Drop seed/sample rows once we have real data flowing.
+  // Only replace the seed/sample rows once we actually have RELEVANT real jobs.
+  // (A source returning noise that all gets filtered out must not wipe the samples.)
+  const realFetchHappened = kept.length > 0;
   let base = existing;
   if (realFetchHappened) base = existing.filter((j) => j.source !== 'Sample');
 

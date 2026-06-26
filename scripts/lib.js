@@ -111,6 +111,17 @@ export function mergeJobs(existing, incoming, profile, nowISO) {
 
   let arr = [...map.values()];
 
+  // Self-heal: re-score every stored job against the CURRENT profile, so that
+  // keyword/scoring fixes retroactively drop entries that are no longer relevant
+  // (e.g. old false positives). Seeded samples are kept untouched.
+  arr = arr.filter((j) => {
+    if (j.source === 'Sample') return true;
+    const { score, hits, excluded } = scoreJob(j, profile);
+    j.score = score;
+    j.hits = hits;
+    return !excluded && score >= (profile.minMatchScore || 0);
+  });
+
   // Retention: drop anything not seen within retentionDays.
   const cutoff = now - (profile.retentionDays || 45) * 86400000;
   arr = arr.filter((j) => Date.parse(j.lastSeen || j.firstSeen) >= cutoff);
