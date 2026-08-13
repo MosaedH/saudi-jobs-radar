@@ -1,11 +1,15 @@
 {
-  "lastUpdated": "2026-08-13T06:14:33.499Z",
+  "lastUpdated": "2026-08-13T08:19:04.448Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
-    "total": 0,
-    "new24h": 0,
-    "byPublisher": {},
-    "bySource": {}
+    "total": 1,
+    "new24h": 1,
+    "byPublisher": {
+      "swooped.co": 1
+    },
+    "bySource": {
+      "Jooble": 1
+    }
   },
   "queries": [
     "cyber security",
@@ -24,8 +28,8 @@
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-08-13T06:14:33.499Z",
-      "lastCount": 47,
+      "lastRun": "2026-08-13T08:19:04.448Z",
+      "lastCount": 41,
       "ok": true
     }
   }
