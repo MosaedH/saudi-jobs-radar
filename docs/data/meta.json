@@ -1,14 +1,15 @@
 {
-  "lastUpdated": "2026-08-26T18:58:58.565Z",
+  "lastUpdated": "2026-08-26T21:44:43.033Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
-    "total": 1,
-    "new24h": 0,
+    "total": 2,
+    "new24h": 1,
     "byPublisher": {
+      "hireskys.com": 1,
       "swooped.co": 1
     },
     "bySource": {
-      "Jooble": 1
+      "Jooble": 2
     }
   },
   "queries": [
@@ -28,8 +29,8 @@
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-08-26T18:58:58.565Z",
-      "lastCount": 41,
+      "lastRun": "2026-08-26T21:44:43.033Z",
+      "lastCount": 48,
       "ok": true
     }
   }
