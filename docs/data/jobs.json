@@ -1,6 +1,27 @@
 [
   {
     "source": "Jooble",
+    "publisher": "remoshift.com",
+    "title": "Enterprise Account Manager - Riyadh (Saudi National)",
+    "company": "Beyondtrust",
+    "city": "",
+    "country": "Saudi Arabia",
+    "remote": false,
+    "postedAt": "2026-08-25T00:00:00.0000000",
+    "applyLink": "https://jooble.org/desc/7425809098685366494?ckey=cyber+security&rgn=55134&pos=7&groupId=36617&elckey=-4408051320361557379&p=1&aq=7269772252222060168&cid=13785&jobAge=392&brelb=100&bscr=8.605631&scr=8.605631",
+    "description": "&nbsp;...software, IT services, SaaS, IoT, or related managed services sales to global organizations - Experience with Salesforce - Already <b>cyber security </b>vendor on cloud/sub solutions channel oriented - Able to command sales message and sales - Experience leveraging the channel to...&nbsp;",
+    "employmentType": "Full-time",
+    "logo": "",
+    "score": 11,
+    "hits": [
+      "cyber security"
+    ],
+    "id": "eys7h2",
+    "firstSeen": "2026-09-10T14:49:14.726Z",
+    "lastSeen": "2026-09-10T14:49:14.726Z"
+  },
+  {
+    "source": "Jooble",
     "publisher": "hireskys.com",
     "title": "Senior Cyber Security Consultant",
     "company": "Immersivelabs",
@@ -19,7 +40,7 @@
     ],
     "id": "1wlrks",
     "firstSeen": "2026-08-26T21:44:43.033Z",
-    "lastSeen": "2026-09-10T10:38:11.065Z"
+    "lastSeen": "2026-09-10T14:49:14.726Z"
   },
   {
     "source": "Jooble",
@@ -40,6 +61,6 @@
     ],
     "id": "1ec3zwe",
     "firstSeen": "2026-08-13T08:19:04.448Z",
-    "lastSeen": "2026-09-10T10:38:11.065Z"
+    "lastSeen": "2026-09-10T14:49:14.726Z"
   }
 ]
