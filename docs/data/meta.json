@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-11T08:34:02.057Z",
+  "lastUpdated": "2026-09-11T13:14:08.126Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
     "total": 3,
@@ -25,13 +25,13 @@
   ],
   "sources": {
     "jsearch": {
-      "lastRun": "2026-09-11T03:03:51.226Z",
+      "lastRun": "2026-09-11T13:14:08.126Z",
       "lastCount": 0,
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-09-11T08:34:02.057Z",
-      "lastCount": 40,
+      "lastRun": "2026-09-11T13:14:08.126Z",
+      "lastCount": 38,
       "ok": true
     }
   }
