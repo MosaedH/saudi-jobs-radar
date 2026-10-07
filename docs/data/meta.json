@@ -1,16 +1,17 @@
 {
-  "lastUpdated": "2026-10-06T22:26:48.770Z",
+  "lastUpdated": "2026-10-07T02:05:20.027Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
-    "total": 3,
-    "new24h": 0,
+    "total": 4,
+    "new24h": 1,
     "byPublisher": {
+      "decentrajobs.com": 1,
       "remoshift.com": 1,
       "hireskys.com": 1,
       "swooped.co": 1
     },
     "bySource": {
-      "Jooble": 3
+      "Jooble": 4
     }
   },
   "queries": [
@@ -25,13 +26,13 @@
   ],
   "sources": {
     "jsearch": {
-      "lastRun": "2026-10-06T17:56:25.912Z",
+      "lastRun": "2026-10-07T02:05:20.027Z",
       "lastCount": 0,
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-10-06T22:26:48.770Z",
-      "lastCount": 9,
+      "lastRun": "2026-10-07T02:05:20.027Z",
+      "lastCount": 12,
       "ok": true
     }
   }
