@@ -1,15 +1,14 @@
 {
-  "lastUpdated": "2026-11-15T01:41:48.528Z",
+  "lastUpdated": "2026-11-15T08:49:56.597Z",
   "profileLabel": "Cybersecurity — Saudi Arabia",
   "totals": {
-    "total": 2,
+    "total": 1,
     "new24h": 0,
     "byPublisher": {
-      "decentrajobs.com": 1,
-      "swooped.co": 1
+      "decentrajobs.com": 1
     },
     "bySource": {
-      "Jooble": 2
+      "Jooble": 1
     }
   },
   "queries": [
@@ -24,12 +23,12 @@
   ],
   "sources": {
     "jsearch": {
-      "lastRun": "2026-11-14T21:58:25.219Z",
+      "lastRun": "2026-11-15T08:49:56.597Z",
       "lastCount": 0,
       "ok": true
     },
     "jooble": {
-      "lastRun": "2026-11-15T01:41:48.528Z",
+      "lastRun": "2026-11-15T08:49:56.597Z",
       "lastCount": 1,
       "ok": true
     }
